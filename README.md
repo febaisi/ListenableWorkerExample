@@ -6,7 +6,7 @@ Google provides good documentation for it - but it's always helpful to have one 
 a piece of code to follow for the ListenableWorker implementation with Kotlin, which should be widely used since this is the right way
 to retrieve Locations using WorkManager. 
 
-Even though it's a simple project I tried to fit it in the MVVM pattern, so it also covers a little bit of:
+Even though it's a simple project I tried to use the MVVM pattern, so it also covers a little bit of:
 - Basic kodein -> Kotlin dependency injection
 - ModelViews
 - ViewModelProviders
