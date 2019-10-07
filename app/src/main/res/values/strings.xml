@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ListenableWorkerExample</string>
+    <string name="activity_title">Location result:</string>
+    <string name="check_logs">Pls check logs</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="request_location">Request Location</string>
 </resources>
