@@ -2,7 +2,7 @@
 
 ### Simple project using ListenableWorkers with Kotlin.
 
-Google provides good documentation for it - but it's always helpful to have one example to follow. I had a couple of issues to find
+Google provides good documentation for it - but it's always helpful to have an example to follow. I had a couple of issues to find
 a piece of code to follow for the ListenableWorker implementation with Kotlin, which should be widely used since this is the right way
 to retrieve Locations using WorkManager. 
 
