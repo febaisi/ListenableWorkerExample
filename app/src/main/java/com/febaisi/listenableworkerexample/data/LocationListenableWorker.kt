@@ -9,7 +9,8 @@ import androidx.work.ListenableWorker
 import androidx.work.WorkerParameters
 import com.google.android.gms.location.LocationServices
 import com.google.common.util.concurrent.ListenableFuture
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers.Default
 import kotlinx.coroutines.launch
 
 class LocationListenableWorker(appContext: Context, workerParams: WorkerParameters)
@@ -25,7 +26,7 @@ class LocationListenableWorker(appContext: Context, workerParams: WorkerParamete
 
     override fun startWork(): ListenableFuture<Result> {
 
-        GlobalScope.launch {
+        CoroutineScope(Default).launch {
             //Getting out of MAIN Thread to set up location listener
             //This scope will be finished after setting up the listeners (Not wait through the final response)
             getLocation()
