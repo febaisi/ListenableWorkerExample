@@ -11,6 +11,7 @@ Even though it's a simple project I tried to use the MVVM pattern, so it also co
 - ModelViews
 - ViewModelProviders
 - LiveData
+- LiveData Transformations - (Map and SwitchMap)
 - Repository (In a fake way)
 - Location Permission (Including new Android 10 - Background location)
 

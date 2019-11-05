@@ -29,7 +29,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.10" />
 
-
         <TextView
             android:id="@+id/tvLocationDirection"
             android:layout_width="wrap_content"
@@ -43,7 +42,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textViewTitle"
             app:layout_constraintVertical_bias="0"
-            tools:text="LocationDirections" />
+            android:text="@{viewmodel.lastLocation}"
+            tools:text="@string/location_data_placeholder" />
 
         <TextView
             android:id="@+id/tvLocationTimeStamp"
@@ -58,18 +58,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tvLocationDirection"
             app:layout_constraintVertical_bias="0"
-            tools:text="LocationTimeStamp" />
+            android:text="@{viewmodel.lastRequestTime}"
+            tools:text="@string/location_time_placeholder"/>
+
+        <TextView
+            android:id="@+id/tvWorkInfoState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvLocationTimeStamp"
+            app:layout_constraintVertical_bias="0"
+            android:text="@{viewmodel.workStateInfo}"
+            tools:text="@string/work_info_placeholder"/>
 
         <Button
             android:id="@+id/buttonRequestLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/request_location"
+            android:onClick="@{(view) -> viewmodel.getLocationWorkInfoLiveData()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle"></Button>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

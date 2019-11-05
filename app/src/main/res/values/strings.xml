@@ -4,4 +4,7 @@
     <string name="check_logs">Pls check logs</string>
     <string name="something_went_wrong">Something went wrong</string>
     <string name="request_location">Request Location</string>
+    <string name="location_data_placeholder">LocationDataPlaceHolder</string>
+    <string name="location_time_placeholder">LocationTimePlaceHolder</string>
+    <string name="work_info_placeholder">WorkInfoPlaceHolder</string>
 </resources>

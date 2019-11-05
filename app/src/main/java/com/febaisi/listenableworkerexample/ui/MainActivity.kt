@@ -42,23 +42,10 @@ class MainActivity : AppCompatActivity(), KodeinAware {
             this.viewmodel = mainViewModel
         }
 
-        buttonRequestLocation.setOnClickListener {
-            mainViewModel.getLocationWorkInfoLiveData().observe(this, Observer { workInfo ->
-                if (workInfo?.state == WorkInfo.State.SUCCEEDED) {
-                    val outputData = workInfo.outputData
-                    tvLocationDirection.text = "${outputData.getString(LocationListenableWorker.LOCATION_LAT)},${outputData.getString(
-                        LocationListenableWorker.LOCATION_LONG)}"
-                    tvLocationTimeStamp.text = convertTime(outputData.getLong(
-                        LocationListenableWorker.LOCATION_TIME, 0))
-                } else if (workInfo?.state == WorkInfo.State.FAILED) {
-                    tvLocationDirection.text = getString(R.string.something_went_wrong)
-                    tvLocationTimeStamp.text = getString(R.string.check_logs)
-                }
-            })
-        }
+//        buttonRequestLocation.setOnClickListener {
+//            mainViewModel.getLocationWorkInfoLiveData()
+//        }
     }
-
-    private fun convertTime(longDate: Long) = SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(Date(longDate))
 
     private fun requestFullLocationPermission() {
         ActivityCompat.requestPermissions(this, arrayOf(
