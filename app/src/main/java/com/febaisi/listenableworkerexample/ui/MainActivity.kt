@@ -41,10 +41,6 @@ class MainActivity : AppCompatActivity(), KodeinAware {
             this.lifecycleOwner = this@MainActivity
             this.viewmodel = mainViewModel
         }
-
-//        buttonRequestLocation.setOnClickListener {
-//            mainViewModel.getLocationWorkInfoLiveData()
-//        }
     }
 
     private fun requestFullLocationPermission() {
