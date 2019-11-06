@@ -5,18 +5,12 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.work.WorkInfo
 import com.febaisi.listenableworkerexample.R
-import com.febaisi.listenableworkerexample.data.LocationListenableWorker
 import com.febaisi.listenableworkerexample.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.closestKodein
 import org.kodein.di.generic.instance
-import java.text.SimpleDateFormat
-import java.util.*
 
 
 class MainActivity : AppCompatActivity(), KodeinAware {
