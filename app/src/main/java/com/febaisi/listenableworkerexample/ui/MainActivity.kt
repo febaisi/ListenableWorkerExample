@@ -38,9 +38,6 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     }
 
     private fun requestFullLocationPermission() {
-        ActivityCompat.requestPermissions(this, arrayOf(
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_BACKGROUND_LOCATION),
-            1)
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),1)
     }
 }
